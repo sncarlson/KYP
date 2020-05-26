@@ -21,24 +21,35 @@ public class Cardio {
     @Column(name = "POINTS")
     private String points;
 
-    @Column(name = "SEX_ID")
-    private long sexId;
+    @ManyToOne
+    @JoinColumn(name = "SEX_ID")
+    private Sex sex;
 
-    @Column(name = "RISK_ID")
-    private long riskId;
+    @ManyToOne
+    @JoinColumn(name = "RISK_ID")
+    private Risk risk;
 
-    @Column(name = "AGE_ID")
-    private long ageId;
+    @ManyToOne
+    @JoinColumn(name = "AGE_ID")
+    private Age age;
 
-    @Column(name = "TARGET_ID")
-    private long targetId;
+    @ManyToOne
+    @JoinColumn(name = "TARGET_ID")
+    private Targets target;
 
-    public long getCardioId() {
-        return cardioId;
+
+    public Cardio(String minTime, String maxTime, String points, Sex sex, Risk risk, Age age, Targets target) {
+        this.minTime = minTime;
+        this.maxTime = maxTime;
+        this.points = points;
+        this.sex = sex;
+        this.risk = risk;
+        this.age = age;
+        this.target = target;
     }
 
-    public void setCardioId(long cardioId) {
-        this.cardioId = cardioId;
+    public Cardio() {
+
     }
 
     public String getMinTime() {
@@ -65,35 +76,35 @@ public class Cardio {
         this.points = points;
     }
 
-    public long getSexId() {
-        return sexId;
+    public Sex getSex() {
+        return sex;
     }
 
-    public void setSexId(long sexId) {
-        this.sexId = sexId;
+    public void setSex(Sex sex) {
+        this.sex = sex;
     }
 
-    public long getRiskId() {
-        return riskId;
+    public Risk getRisk() {
+        return risk;
     }
 
-    public void setRiskId(long riskId) {
-        this.riskId = riskId;
+    public void setRisk(Risk risk) {
+        this.risk = risk;
     }
 
-    public long getAgeId() {
-        return ageId;
+    public Age getAge() {
+        return age;
     }
 
-    public void setAgeId(long ageId) {
-        this.ageId = ageId;
+    public void setAge(Age age) {
+        this.age = age;
     }
 
-    public long getTargetId() {
-        return targetId;
+    public Targets getTarget() {
+        return target;
     }
 
-    public void setTargetId(long targetId) {
-        this.targetId = targetId;
+    public void setTarget(Targets target) {
+        this.target = target;
     }
 }
