@@ -21,6 +21,10 @@ public class Risk {
 
     }
 
+    public long getRiskId() {
+        return riskId;
+    }
+
     public String getRiskType() {
         return riskType;
     }

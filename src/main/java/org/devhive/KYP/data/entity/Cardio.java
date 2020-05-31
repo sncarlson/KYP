@@ -12,11 +12,8 @@ public class Cardio {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long cardioId;
 
-    @Column(name="MIN_TIME")
-    private String minTime;
-
-    @Column(name = "MAX_TIME")
-    private String maxTime;
+    @Column(name="TIME_RANGE")
+    private String timeRange;
 
     @Column(name = "POINTS")
     private String points;
@@ -38,9 +35,8 @@ public class Cardio {
     private Targets target;
 
 
-    public Cardio(String minTime, String maxTime, String points, Sex sex, Risk risk, Age age, Targets target) {
-        this.minTime = minTime;
-        this.maxTime = maxTime;
+    public Cardio(String timeRange, String points, Sex sex, Risk risk, Age age, Targets target) {
+        this.timeRange = timeRange;
         this.points = points;
         this.sex = sex;
         this.risk = risk;
@@ -52,20 +48,16 @@ public class Cardio {
 
     }
 
-    public String getMinTime() {
-        return minTime;
+    public long getCardioId() {
+        return cardioId;
     }
 
-    public void setMinTime(String minTime) {
-        this.minTime = minTime;
+    public String getTimeRange() {
+        return timeRange;
     }
 
-    public String getMaxTime() {
-        return maxTime;
-    }
-
-    public void setMaxTime(String maxTime) {
-        this.maxTime = maxTime;
+    public void setTimeRange(String timeRange) {
+        this.timeRange = timeRange;
     }
 
     public String getPoints() {

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AgeRepository extends CrudRepository<Age, Long> {
+    Age findByAgeRange(String range);
 }

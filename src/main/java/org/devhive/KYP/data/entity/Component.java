@@ -21,6 +21,10 @@ public class Component {
 
     }
 
+    public long getComponentId() {
+        return componentId;
+    }
+
     public String getComponentType() {
         return componentType;
     }

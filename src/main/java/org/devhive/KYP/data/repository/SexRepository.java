@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SexRepository extends CrudRepository<Sex, Long> {
+
+    Sex findBySexType(String type);
+
 }

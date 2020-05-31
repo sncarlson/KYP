@@ -10,34 +10,27 @@ public class Age {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long ageId;
 
-    @Column(name="MIN_AGE")
-    private String minAge;
+    @Column(name="AGE_RANGE")
+    private String ageRange;
 
-    @Column(name="MAX_AGE")
-    private String maxAge;
-
-    public Age(String minAge, String maxAge) {
-        this.minAge = minAge;
-        this.maxAge = maxAge;
+     public Age(String ageRange) {
+        this.ageRange = ageRange;
     }
 
     public Age() {
 
     }
 
-    public String getMinAge() {
-        return minAge;
+    public long getAgeId() {
+        return ageId;
     }
 
-    public void setMinAge(String minAge) {
-        this.minAge = minAge;
+    public String getAgeRange() {
+        return ageRange;
     }
 
-    public String getMaxAge() {
-        return maxAge;
+    public void setAgeRange(String ageRange) {
+        this.ageRange = ageRange;
     }
 
-    public void setMaxAge(String maxAge) {
-        this.maxAge = maxAge;
-    }
 }

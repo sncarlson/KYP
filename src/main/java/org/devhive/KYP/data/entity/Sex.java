@@ -22,6 +22,10 @@ public class Sex {
 
     }
 
+    public long getSexId() {
+        return sexId;
+    }
+
     public String getSexType() {
         return sexType;
     }

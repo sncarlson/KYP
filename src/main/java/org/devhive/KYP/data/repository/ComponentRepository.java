@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ComponentRepository extends CrudRepository<Component, Long> {
+    Component findByComponentType(String type);
 }

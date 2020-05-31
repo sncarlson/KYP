@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RiskRepository extends CrudRepository<Risk, Long> {
+    Risk findByRiskType(String type);
 }

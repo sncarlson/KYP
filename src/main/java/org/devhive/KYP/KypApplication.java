@@ -1,8 +1,8 @@
 package org.devhive.KYP;
 
-
-import org.devhive.KYP.data.entity.Cardio;
-import org.devhive.KYP.data.repository.CardioRepository;
+import org.devhive.KYP.data.entity.Sex;
+import org.devhive.KYP.data.repository.SexRepository;
+import org.devhive.KYP.service.SexService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +26,20 @@ public class KypApplication {
 
 	@RestController
 	@RequestMapping("/test")
-	public class CardioController{
+	public class SexController{
+		private final SexService sexService;
+
 		@Autowired
-		private CardioRepository cardioRepository;
+		public SexController(SexService sexService) {
+			this.sexService = sexService;
+		}
 
 		@GetMapping
-		public Iterable<Cardio> getRooms(){
-			return this.cardioRepository.findAll();
+		public Sex getSex(){
+			String type = "Female";
+			Sex sex = this.sexService.getSex(type);
+			logger.info("I got this: " + sex.getSexType() + " with ID: " + sex.getSexId());
+			return sex;
 		}
 
 	}

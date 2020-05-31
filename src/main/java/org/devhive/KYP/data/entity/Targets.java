@@ -41,6 +41,10 @@ public class Targets {
 
     }
 
+    public long getTargetId() {
+        return targetId;
+    }
+
     public String getMinValue() {
         return minValue;
     }
