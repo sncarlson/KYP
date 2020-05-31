@@ -14,7 +14,7 @@ public class RiskService {
         this.riskRepository = riskRepository;
     }
 
-    Risk getRisk(String type) {
+    public Risk getRisk(String type) {
         return this.riskRepository.findByRiskType(type);
     }
 }

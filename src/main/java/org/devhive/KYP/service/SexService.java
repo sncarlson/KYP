@@ -15,7 +15,6 @@ public class SexService {
     }
 
     public Sex getSex(String type) {
-        Sex sex = sexRepository.findBySexType(type);
-        return sex;
+        return sexRepository.findBySexType(type);
     }
 }

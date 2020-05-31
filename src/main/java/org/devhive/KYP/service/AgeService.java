@@ -14,7 +14,7 @@ public class AgeService {
         this.ageRepository = ageRepository;
     }
 
-    Age getAge(String range) {
+    public Age getAge(String range) {
         return this.ageRepository.findByAgeRange(range);
     }
 }

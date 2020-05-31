@@ -14,7 +14,7 @@ public class ComponentService {
         this.componentRepository = componentRepository;
     }
 
-    Component getComponent(String type) {
+    public Component getComponent(String type) {
         return this.componentRepository.findByComponentType(type);
     }
 }
