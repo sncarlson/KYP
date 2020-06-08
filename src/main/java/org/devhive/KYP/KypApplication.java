@@ -4,7 +4,6 @@ import org.devhive.KYP.data.entity.Age;
 import org.devhive.KYP.data.entity.Cardio;
 import org.devhive.KYP.data.entity.Component;
 import org.devhive.KYP.data.entity.Sex;
-import org.devhive.KYP.data.repository.SexRepository;
 import org.devhive.KYP.service.AgeService;
 import org.devhive.KYP.service.CardioService;
 import org.devhive.KYP.service.ComponentService;
@@ -17,8 +16,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 
 @SpringBootApplication
